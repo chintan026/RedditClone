@@ -1,0 +1,14 @@
+{% extends "reddit/base.html" %}
+
+{% block content %} 
+
+<div class="container py-5">
+	<h1>Create Subreddit</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ subreddit_form.as_ul }}                    
+		<button class="btn btn-primary" type="submit">create</button>
+	</form>
+</div>
+
+{% endblock %}
